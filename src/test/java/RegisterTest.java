@@ -35,15 +35,17 @@ public class RegisterTest {
         driver.findElement(By.id("terms")).click();
 
         driver.findElement(By.id("submitBtn")).click();
-        Thread.sleep(2000);
-
+        Thread.sleep(2000); //Program stop this interview for Better Page Load 2000 milli second  = 2 sec
         System.out.println("Negative Test Executed - Last Name validation checked");
 
+
+        //When Any Element Not Found we Wait till Explict wait lock() After debuge. Grache only you fill all form without script
+        //Crash
         // =====================================================
         // 🔁 RESET PAGE
         // =====================================================
-        driver.navigate().refresh();
-        Thread.sleep(1000);
+        driver.navigate().refresh(); //naviagate control page
+        Thread.sleep(1000); // wait a mintue // Explict is better option (wait to condition complete)
 
         // =====================================================
         // ✅ POSITIVE TEST CASE (All valid data)
@@ -63,12 +65,12 @@ public class RegisterTest {
         // =====================================================
         // ✅ VERIFY SUCCESS MESSAGE
         // =====================================================
-        WebElement successMsg = driver.findElement(By.id("successMsg"));
-        System.out.println("Success Message Displayed: " + successMsg.getText());
+        WebElement successMsg = driver.findElement(By.id("successMsg")); //WebElement Object bnaya aur search in html
+        System.out.println("Success Message Displayed: " + successMsg.getText());  // call agar
 
         // =====================================================
         // ❌ Close Browser
         // =====================================================
-        driver.quit();
+        driver.quit(); // close
     }
 }
