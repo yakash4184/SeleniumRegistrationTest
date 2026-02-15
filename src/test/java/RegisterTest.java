@@ -15,7 +15,9 @@ public class RegisterTest {
         driver.manage().window().maximize();
 
         // 2️⃣ Open Registration Form (MAC PATH)
-        driver.get("file:///Users/akashyadav/frugal-registration/index.html");
+        driver.get("file:///Users/akashyadav/frugal-registration/index.html"); //This is File path
+        //Click on Run button
+
 
         System.out.println("Page URL  : " + driver.getCurrentUrl());
         System.out.println("Page Title: " + driver.getTitle());
